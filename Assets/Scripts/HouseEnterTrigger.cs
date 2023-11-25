@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Alarm : MonoBehaviour
+public class HouseEnterTrigger : MonoBehaviour
 {
     [SerializeField] private UnityEvent _entered;
     [SerializeField] private UnityEvent _exit;
