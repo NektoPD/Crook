@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HouseEnterTrigger : MonoBehaviour
+public class House : MonoBehaviour
 {
     [SerializeField] private UnityEvent _entered;
     [SerializeField] private UnityEvent _exit;

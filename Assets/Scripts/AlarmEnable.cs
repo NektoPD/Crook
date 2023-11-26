@@ -34,14 +34,13 @@ public class AlarmEnable : MonoBehaviour
     {
         while ((_increasingVolume && currentVolume < neededVolume) || (!_increasingVolume && currentVolume > neededVolume))
         {
-            Debug.Log(currentVolume);
             currentVolume = Mathf.MoveTowards(currentVolume, neededVolume, speed);
-
             _alarmClip.volume = currentVolume;
 
             yield return null;
         }
     }
+
     public void Increase()
     {
         Enable(_alarmClip.volume, _maxVolume, _rampSpeed);
