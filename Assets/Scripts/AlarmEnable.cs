@@ -13,6 +13,16 @@ public class AlarmEnable : MonoBehaviour
     private Coroutine _volumeChangeCoroutine;
     private bool _increasingVolume = false;
 
+    public void Increase()
+    {
+        Enable(_alarmClip.volume, _maxVolume, _rampSpeed);
+    }
+
+    public void Decrease()
+    {
+        Enable(_alarmClip.volume, _minVolume, _rampSpeed);
+    }
+
     private void Start()
     {
         _alarmClip.volume = 0;
@@ -39,15 +49,5 @@ public class AlarmEnable : MonoBehaviour
 
             yield return null;
         }
-    }
-
-    public void Increase()
-    {
-        Enable(_alarmClip.volume, _maxVolume, _rampSpeed);
-    }
-
-    public void Decrease()
-    {
-        Enable(_alarmClip.volume, _minVolume, _rampSpeed);
     }
 }
